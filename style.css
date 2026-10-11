@@ -114,11 +114,8 @@ h3 {
 }
 
 .editorial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: start;
+  column-count: 2;
   column-gap: clamp(26px, 4.5vw, 64px);
-  row-gap: clamp(18px, 3vh, 30px);
   color: var(--ink);
   font-size: clamp(1rem, 1.22vw, 1.2rem);
   line-height: 1.62;
@@ -127,10 +124,15 @@ h3 {
 .editorial-grid > * {
   min-width: 0;
   break-inside: avoid;
+  margin-bottom: clamp(18px, 3vh, 30px);
 }
 
 .editorial-grid p {
   margin: 0;
+}
+
+.editorial-grid > p {
+  margin-bottom: clamp(18px, 3vh, 30px);
 }
 
 .editorial-grid a {
@@ -197,16 +199,19 @@ h3 {
 }
 
 .two-column {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-count: 2;
 }
 
 .three-column {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-count: 2;
 }
 
 .problem-grid {
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  align-items: start;
+  column-count: 2;
+}
+
+.summary-grid {
+  column-count: 2;
 }
 
 .case-study {
@@ -510,7 +515,7 @@ blockquote {
   }
 
   .three-column {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
   }
 }
 
@@ -615,7 +620,7 @@ blockquote {
   .editorial-grid,
   .two-column,
   .three-column {
-    grid-template-columns: 1fr;
+    column-count: 1;
     row-gap: 13px;
     font-size: 0.94rem;
   }
