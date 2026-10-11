@@ -214,6 +214,31 @@ h3 {
   column-count: 2;
 }
 
+.summary-grid,
+.scalability-grid,
+.impact-grid {
+  column-rule: 1px solid var(--line);
+  column-fill: balance;
+}
+
+.summary-grid > .story-block,
+.scalability-grid > .story-block,
+.impact-grid > .story-block {
+  break-inside: auto;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-top: 0;
+  background:
+    linear-gradient(var(--agri), var(--agri)) top / 100% 5px no-repeat,
+    linear-gradient(150deg, #fff, #f7faf4);
+}
+
+.summary-grid .story-block p,
+.scalability-grid .story-block p,
+.impact-grid .story-block p {
+  break-inside: avoid;
+}
+
 .case-study {
   padding: 23px 26px;
   border-left: 5px solid var(--agri);
